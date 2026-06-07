@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <div class="container">
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    Student Hub
+                </h1>
+
+                <p>
+                    Create, search, update and manage students from one place.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACTION CARDS
+        ========================== -->
+
+        <section id="home" class="action-grid">
+
+            <div class="action-card create-card" onclick="showView('createView')">
+
+                <div class="icon">
+                    ➕
+                </div>
+
+                <h2>Create</h2>
+
+                <p>Add a new student</p>
+
+            </div>
+
+            <div class="action-card search-card" onclick="showView('searchView')">
+
+                <div class="icon">
+                    🔍
+                </div>
+
+                <h2>Search</h2>
+
+                <p>Find a student</p>
+
+            </div>
+
+            <div class="action-card update-card" onclick="showView('updateView')">
+
+                <div class="icon">
+                    ✏️
+                </div>
+
+                <h2>Update</h2>
+
+                <p>Edit student details</p>
+
+            </div>
+
+            <div class="action-card show-card" onclick="showView('studentsView')">
+
+                <div class="icon">
+                    📚
+                </div>
+
+                <h2>Students</h2>
+
+                <p>Browse all records</p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CREATE
+        ========================== -->
+
+        <section id="createView" class="panel">
+
+            <button class="back-btn" onclick="goHome()">
+                ← Back
+            </button>
+
+            <div class="panel-card">
+
+                <h2>Create Student</h2>
+
+                <input
+                    id="createName"
+                    type="text"
+                    placeholder="Student Name"
+                >
+
+                <input
+                    id="createCourse"
+                    type="text"
+                    placeholder="Course"
+                >
+
+                <button id="createBtn" class="primary-btn">
+                    Create Student
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SEARCH
+        ========================== -->
+
+        <section id="searchView" class="panel">
+
+            <button class="back-btn" onclick="goHome()">
+                ← Back
+            </button>
+
+            <div class="panel-card">
+
+                <h2>Search Student</h2>
+
+                <input
+                    id="searchId"
+                    type="text"
+                    placeholder="Enter Student ID"
+                >
+
+                <button id="searchBtn" class="primary-btn">
+                    Search
+                </button>
+
+            </div>
+
+            <div id="searchResult"></div>
+
+        </section>
+
+
+
+        <!-- =========================
+             UPDATE
+        ========================== -->
+
+        <section id="updateView" class="panel">
+
+            <button class="back-btn" onclick="goHome()">
+                ← Back
+            </button>
+
+            <div class="panel-card">
+
+                <h2>Update Student</h2>
+
+                <input
+                    id="updateId"
+                    type="text"
+                    placeholder="Student ID"
+                >
+
+                <input
+                    id="updateName"
+                    type="text"
+                    placeholder="New Name"
+                >
+
+                <input
+                    id="updateCourse"
+                    type="text"
+                    placeholder="New Course"
+                >
+
+                <button id="updateBtn" class="primary-btn">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             STUDENTS
+        ========================== -->
+
+        <section id="studentsView" class="panel">
+
+            <button class="back-btn" onclick="goHome()">
+                ← Back
+            </button>
+
+            <div class="students-header">
+
+                <h2>All Students</h2>
+
+            </div>
+
+            <div id="studentCards" class="student-grid">
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
